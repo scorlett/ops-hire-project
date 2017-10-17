@@ -1,6 +1,12 @@
 ---
 # tasks file for finv-app
 
+- name: Install libs for php-fpm mysql connection
+  apt: name={{ item }} update_cache=yes
+  become_method: sudo
+  with_items:
+    - php{{ php_fpm_version }}-mysql
+
 - name: Remove  html directory
   file: path=/var/www/html state=absent
 

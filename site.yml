@@ -12,7 +12,9 @@
 - hosts: appserver
   become: True
   roles:
-    - { role: apache, tags: ['apache'] }
+ #   - { role: apache, tags: ['apache'] }
+    - { role: php-fpm, tags: ['php-fpm'] }
+    - { role: nginx, tags: ['nginx'] }
     - { role: webapp, tags: ['webapp'] }
 
 

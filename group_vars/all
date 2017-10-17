@@ -3,3 +3,4 @@ database_password: mysqlpass
 database_user: mysqluser
 database_name: electronics
 database_port: 2310
+php_fpm_version: 5.6
